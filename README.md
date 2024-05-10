@@ -17,6 +17,11 @@
 저장기능이 있습니다. 추가한 순서대로 표시됩니다. 삭제시 검색리스트에도 반영됩니다.
 
 
+24.05.10 최신 fix
+
+ 	apiKey값에 관한 보안성을 위해 env방식을 채용했습니다. 환경변수(key)는 도트 앤 이브 로 관리하며 해당 파일을 ignore 처리하여 등록되어 있지 않습니다. 실제 파일을 테스트시 retrofit의 헤더값에 본인의 api key값을 넣어주시면 됩니다.
+
+
 DATA & RETROFIT 
   NetWorkClient 오브젝트에서 Retrofit을 Build 합니다. API Key를 헤더로 요구하기에 해당부분에서 추가합니다.
   Video & Image 가 요구되는 DTO가 다릅니다. 이에맞춰 따로 요청하는 Repository 와 DTO를 구현하였습니다. 각각의 Interface로 비동기 요청하게 됩니다. 
