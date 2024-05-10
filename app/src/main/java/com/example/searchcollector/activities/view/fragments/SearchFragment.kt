@@ -116,7 +116,7 @@ class SearchFragment : Fragment() {
             viewModel.setSearchDataClear() // 첫 검색시 기존데이터 삭제
             val searchText = binding.etSearchFrag.text.toString()
             if(searchText.isNotEmpty()) {
-                viewModel.search(searchText)
+                viewModel.search(searchText, requireActivity().supportFragmentManager)
             }
             saveSearchData(pref = pref)
         }

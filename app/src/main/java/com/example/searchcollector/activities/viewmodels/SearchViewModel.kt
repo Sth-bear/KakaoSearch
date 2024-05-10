@@ -2,6 +2,7 @@ package com.example.searchcollector.activities.viewmodels
 
 import android.content.Context
 import android.util.Log
+import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -31,19 +32,25 @@ class SearchViewModel(private val imgRepo: ImageSearchRepository, private val vi
     }
 
 
-    fun search(searchWord: String) {
+    fun search(searchWord: String, fragmentManager: FragmentManager) {
         _totalSearchResult.value = mutableListOf()
+        val progressDialogFragment = ProgressDialogFragment()
+        progressDialogFragment.show(fragmentManager,"progressDialog")
         viewModelScope.launch {
-            val images = mutableListOf<ImageInfo>()
-            for (i in 1 .. 50) {
-                images.addAll(imgRepo.search(searchWord, i))
+            try {
+                val images = mutableListOf<ImageInfo>()
+                for (i in 1..50) {
+                    images.addAll(imgRepo.search(searchWord, i))
+                }
+                val videos = mutableListOf<VideoInfo>()
+                for (i in 1..15) {
+                    videos.addAll(videoRepo.search(searchWord, i))
+                }
+                val itemList = imgToAdapterItem(images, videos)
+                _totalSearchResult.value = itemList
+            } finally {
+                progressDialogFragment.dismiss()
             }
-            val videos = mutableListOf<VideoInfo>()
-            for(i in 1 .. 15) {
-                videos.addAll(videoRepo.search(searchWord, i))
-            }
-            val itemList = imgToAdapterItem(images,videos)
-            _totalSearchResult.value = itemList
         }
     }
 
