@@ -1,4 +1,5 @@
-![image](https://github.com/Sth-bear/SearchCollector/assets/72172581/5fa5830d-779e-4d2f-b625-8a518f3070fc)
+![image](https://github.com/Sth-bear/KakaoSearch/assets/72172581/88bd81da-543b-42e3-8988-fb56ea650579)
+
 위의 그림을 구상하고 진행하였습니다. 
 
 
