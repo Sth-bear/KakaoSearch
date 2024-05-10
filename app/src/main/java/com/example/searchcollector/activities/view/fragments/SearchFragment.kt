@@ -3,6 +3,7 @@ package com.example.searchcollector.activities.view.fragments
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -22,7 +23,8 @@ import com.example.searchcollector.activities.view.adapters.SearchFragAdapter
 import com.example.searchcollector.activities.viewmodels.BookMarkViewModel
 import com.example.searchcollector.activities.viewmodels.SearchViewModel
 import com.example.searchcollector.databinding.FragmentSearchBinding
-
+import io.github.cdimascio.dotenv.dotenv
+import kotlin.math.log
 
 
 class SearchFragment : Fragment() {

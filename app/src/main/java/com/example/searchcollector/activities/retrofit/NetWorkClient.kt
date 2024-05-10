@@ -2,6 +2,7 @@ package com.example.searchcollector.activities.retrofit
 
 import android.util.Log
 import com.squareup.picasso.BuildConfig
+import io.github.cdimascio.dotenv.dotenv
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -10,6 +11,11 @@ import java.util.concurrent.TimeUnit
 
 object NetWorkClient {
     private const val BASE_URL = "https://dapi.kakao.com/v2/search/"
+    private val env = dotenv{
+        directory = "/assets"
+        filename = "env"
+    }
+    private val apiKey = env["API_KEY"]
 
     private fun createOkHttpClient(): OkHttpClient {
         val interceptor = HttpLoggingInterceptor(object : HttpLoggingInterceptor.Logger{
@@ -27,7 +33,7 @@ object NetWorkClient {
             .writeTimeout(20, TimeUnit.SECONDS)
             .addInterceptor { chain ->
                 val request = chain.request().newBuilder()
-                    .addHeader("Authorization", "KakaoAK ")
+                    .addHeader("Authorization", "${apiKey}")
                     .build()
                 chain.proceed(request)
             }
