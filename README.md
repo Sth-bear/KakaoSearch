@@ -19,7 +19,12 @@
 
 24.05.10 최신 fix
 
- 	apiKey값에 관한 보안성을 위해 env방식을 채용했습니다. 환경변수(key)는 도트 앤 이브 로 관리하며 해당 파일을 ignore 처리하여 등록되어 있지 않습니다. 실제 파일을 테스트시 retrofit의 헤더값에 본인의 api key값을 넣어주시면 됩니다.
+ 	apiKey값에 관한 보안성을 위해 env방식을 채용했습니다. 
+  	환경변수(key)는 도트 앤 이브 로 관리하며 해당 파일을 ignore 처리하여 등록되어 있지 않습니다. 
+   	실제 파일을 테스트시 retrofit의 헤더값에 본인의 api key값을 넣어주시면 됩니다.(36번째 줄)
+![image](https://github.com/Sth-bear/KakaoSearch/assets/72172581/973b5da8-99f7-4a4e-a5a9-dba3a102a45d)
+
+
 
 
 DATA & RETROFIT 
