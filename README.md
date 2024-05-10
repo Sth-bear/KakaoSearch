@@ -3,12 +3,11 @@
 위의 그림을 구상하고 진행하였습니다. 
 
 
-![main](https://github.com/Sth-bear/KakaoSearch/assets/72172581/a7a5738c-e1ba-4567-8dad-ccb86b6a343d)
+![main](https://github.com/Sth-bear/KakaoSearch/assets/72172581/a7a5738c-e1ba-4567-8dad-ccb86b6a343d) ![scroll](https://github.com/Sth-bear/KakaoSearch/assets/72172581/aa47b573-9039-43c6-bd9b-7ea14fc36db4)
 
 검색 시 로딩바와 함께 완료시 아이템이 표시됩니다. 
 
 
-![scroll](https://github.com/Sth-bear/KakaoSearch/assets/72172581/aa47b573-9039-43c6-bd9b-7ea14fc36db4)
 
 최대 4225개의 아이템까지 스크롤이 가능합니다. 한번에 25개의 아이템이 등장합니다. 
 
