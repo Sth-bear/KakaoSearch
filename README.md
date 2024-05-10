@@ -27,9 +27,11 @@
 
 
 
+
+
 DATA & RETROFIT 
-  NetWorkClient 오브젝트에서 Retrofit을 Build 합니다. API Key를 헤더로 요구하기에 해당부분에서 추가합니다.
-  Video & Image 가 요구되는 DTO가 다릅니다. 이에맞춰 따로 요청하는 Repository 와 DTO를 구현하였습니다. 각각의 Interface로 비동기 요청하게 됩니다. 
+ 	 NetWorkClient 오브젝트에서 Retrofit을 Build 합니다. API Key를 헤더로 요구하기에 해당부분에서 추가합니다.
+  	 Video & Image 가 요구되는 DTO가 다릅니다. 이에맞춰 따로 요청하는 Repository 와 DTO를 구현하였습니다. 각각의 Interface로 비동기 요청하게 됩니다. 
 
 SearchViewModel
 	
